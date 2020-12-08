@@ -1,33 +1,78 @@
 # About the project:
-This is a spring-boot project that exposes an API for validating a list of transactions records
-that every record should has the following fields with value more than zero  
-- id  
-- transactionAmount
-- fromId
-- toId 
+VaccNow is an healthcare organization managing the process of Covid-19 vaccine to public,
+so that the VaccNow is planning to build multi their digital channels for consuming a modern API for basic features. 
+# Used Technologies: 
+- **Spring-Boot:** For exposing APIs and modifying the DB 
+- **Angular 9:** For Web view
+- **H2** For in memory DB so it be easy to run the project 
 
-# Used Libraries: 
-- **hibernate-validator:** for validating the data in the request body 
-- **gson:** For streaming the list of the records from JSON file  one by one for saving the memory
+# ERD: 
+![Alt text](ERD.jpg?raw=true "ERD")
 
 # Exposed APIs: 
-**Path:** /validate ```or /vaccNow/validate if depolyed on tomacat```
+- **Path:** /branch , /branch?branch=1
 
-**Method:** Post 
+    - **Method:** Get 
 
-**Description:** this method is responsible for validating list of transactions records  
+    - **Description:** this method is responsible for getting All the branches with its details 
+    and getting details of a spastic branch 
+    
+- **Path:** /branch/mock-up ,
 
-**Implementation in details:** 
-- Validate that the body exists and not empty
-- Decrypt the body 
-- Save the body to a file to save the memory
-- Star parsing the body record by record and validate it
-- Return HttpStatus if the body is ok
-- Route to another service if the data is not valid 
-> Note : We can use the following as a valid body for calling the method ```{
-                                                                                "data": "[{\"id\":123,\"transactionAmount\":1234,\"fromId\":1234, \"toId\":9874},{\"id\":123,\"transactionAmount\":1234,\"fromId\":1234, \"toId\":9874},{\"id\":123,\"transactionAmount\":1234,\"fromId\":1234, \"toId\":9874},{\"id\":123,\"transactionAmount\":1234,\"fromId\":1234, \"toId\":9874},{\"id\":123,\"transactionAmount\":1234,\"fromId\":1234, \"toId\":9874},{\"id\":123,\"transactionAmount\":1234,\"fromId\":1234, \"toId\":9874},{\"id\":123,\"transactionAmount\":1234,\"fromId\":1234, \"toId\":9874},{\"id\":123,\"transactionAmount\":1234,\"fromId\":1234, \"toId\":9874},{\"id\":123,\"transactionAmount\":1234,\"fromId\":1234, \"toId\":9874},{\"id\":123,\"transactionAmount\":1234,\"fromId\":1234, \"toId\":9874},{\"id\":123,\"transactionAmount\":1234,\"fromId\":1234, \"toId\":9874},{\"id\":123,\"transactionAmount\":1234,\"fromId\":1234, \"toId\":9874},{\"id\":123,\"transactionAmount\":1234,\"fromId\":1234, \"toId\":9874},{\"id\":123,\"transactionAmount\":1234,\"fromId\":1234, \"toId\":9874}]"
-                                                                            }```  
+    - **Method:** Get 
 
-##Estimation:
-- From half to full day for analysing the best solution
-- From 1 to 2 days for full implementation
+    - **Description:** this method is responsible for getting All only list of branches names and ids 
+- **Path:** /branch/available-time-slots ,
+ 
+     - **Method:** Get 
+ 
+     - **Description:** this method is responsible for getting all the available time slots 
+     at spastic for a branch  
+     
+- **Path:** /vaccination/applied , /vaccination/applied?branch=1, /vaccination/applied?branch=1&dateFrom=2020-12-01
+ , /vaccination/applied?branch=1&dateFrom=2020-12-01&dateTo=2020-12-30
+ 
+     - **Method:** Get 
+ 
+     - **Description:** this method is responsible for getting all applied vaccination 
+     for per branch and  per time period
+- **Path:** /vaccination/confirmed , /vaccination/confirmed?branch=1, /vaccination/confirmed?branch=1&dateFrom=2020-12-01
+                                      , /vaccination/confirmed?branch=1&dateFrom=2020-12-01&dateTo=2020-12-30
+ 
+     - **Method:** Get 
+ 
+     - **Description:** this method is responsible for getting all confirmed vaccination 
+     for per branch and  per time period
+
+- **Path:** /vaccination/schedule 
+
+     - **Method:** Post 
+ 
+     - **Description:** this method is responsible for scheduling a vaccination
+     
+     - **body:** ``` {
+                         "vaccinationDay": "2020-12-08",
+                         "branchVaccine": "1",
+                         "timeSlot": "1",
+                         "payingType": "c",
+                         "clintEmail":"forallthings93@gmail.com"
+                     }``` 
+
+
+- **Path:** /payment-methods 
+
+     - **Method:** Get 
+ 
+     - **Description:** this method is responsible for getting all available payment methods
+
+##Web View:
+
+![Alt text](webViewScreenShoots/1.png?raw=true "1")
+![Alt text](webViewScreenShoots/1.png?raw=true "2")
+![Alt text](webViewScreenShoots/1.png?raw=true "3")
+![Alt text](webViewScreenShoots/1.png?raw=true "4")
+![Alt text](webViewScreenShoots/1.png?raw=true "5")
+
+##Putting Project on rails:
+
+This spring boot with embed tomcat and inMemory DB with some mock ups values so there is no special configuration required  
