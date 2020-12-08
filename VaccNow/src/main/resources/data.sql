@@ -1,0 +1,45 @@
+-- INSERT INTO branch ( branch_location, branch_name) VALUES ( 'Cairo', 'Cairo Branch');
+-- INSERT INTO branch ( branch_location, branch_name) VALUES ( 'Alex', 'Alex Branch');
+-- INSERT INTO branch ( branch_location, branch_name) VALUES ( 'Aswan', 'Aswan Branch');
+--
+-- INSERT INTO  vaccine (vaccine_name, vaccine_price) VALUES ('Vaccine 1', 10);
+--
+--
+--
+-- INSERT INTO vaccination_time_slots (time_from, time_to) VALUES ('10:00', '10:15');
+-- INSERT INTO vaccination_time_slots (time_from, time_to) VALUES ('10:15', '10:30');
+-- INSERT INTO vaccination_time_slots (time_from, time_to) VALUES ('10:30', '10:45');
+-- INSERT INTO vaccination_time_slots (time_from, time_to) VALUES ('10:45', '11:00');
+--
+-- INSERT INTO vaccination_time_slots (time_from, time_to) VALUES ('11:00', '11:15');
+-- INSERT INTO vaccination_time_slots (time_from, time_to) VALUES ('11:15', '11:30');
+-- INSERT INTO vaccination_time_slots (time_from, time_to) VALUES ('11:30', '11:45');
+-- INSERT INTO vaccination_time_slots (time_from, time_to) VALUES ('11:45', '12:00');
+--
+-- INSERT INTO vaccination_time_slots (time_from, time_to) VALUES ('12:00', '12:15');
+-- INSERT INTO vaccination_time_slots (time_from, time_to) VALUES ('12:15', '12:30');
+-- INSERT INTO vaccination_time_slots (time_from, time_to) VALUES ('12:30', '12:45');
+-- INSERT INTO vaccination_time_slots (time_from, time_to) VALUES ('12:45', '13:00');
+--
+-- INSERT INTO vaccination_time_slots (time_from, time_to) VALUES ('13:00', '13:15');
+-- INSERT INTO vaccination_time_slots (time_from, time_to) VALUES ('13:15', '13:30');
+-- INSERT INTO vaccination_time_slots (time_from, time_to) VALUES ('13:30', '13:45');
+-- INSERT INTO vaccination_time_slots (time_from, time_to) VALUES ('13:45', '14:00');
+--
+--
+-- INSERT INTO branch_vaccine (branch_id, vaccine_id, vaccine_count) VALUES (1, 1,200);
+-- INSERT INTO branch_vaccine (branch_id, vaccine_id, vaccine_count) VALUES (2, 1,200);
+-- INSERT INTO branch_vaccine (branch_id, vaccine_id, vaccine_count) VALUES (3, 1,0);
+--
+--
+-- INSERT INTO scheduled_vaccination (paying_type, vaccination_day, branch_vaccine_id, vaccination_time_slot_id, is_applied) VALUES ('Cash', '2020-12-06', 1, 1,1);
+-- INSERT INTO scheduled_vaccination (paying_type, vaccination_day, branch_vaccine_id, vaccination_time_slot_id, is_applied) VALUES ('Credit', '2020-12-06', 1, 2,1);
+-- INSERT INTO scheduled_vaccination (paying_type, vaccination_day, branch_vaccine_id, vaccination_time_slot_id, is_applied) VALUES ('Credit', '2020-12-07', 1, 6,1);
+-- INSERT INTO scheduled_vaccination (paying_type, vaccination_day, branch_vaccine_id, vaccination_time_slot_id, is_applied) VALUES ('Cash', '2020-12-06', 1, 13,1);
+-- INSERT INTO scheduled_vaccination (paying_type, vaccination_day, branch_vaccine_id, vaccination_time_slot_id, is_applied) VALUES ('Cash', '2020-12-10', 1, 1,0);
+-- INSERT INTO scheduled_vaccination (paying_type, vaccination_day, branch_vaccine_id, vaccination_time_slot_id, is_applied) VALUES ('Credit', '2020-12-10', 1, 2,0);
+-- INSERT INTO scheduled_vaccination (paying_type, vaccination_day, branch_vaccine_id, vaccination_time_slot_id, is_applied) VALUES ('Cash', '2020-12-06', 2, 4,1);
+-- INSERT INTO scheduled_vaccination (paying_type, vaccination_day, branch_vaccine_id, vaccination_time_slot_id, is_applied) VALUES ('Cash', '2020-12-06', 2, 15,1);
+-- INSERT INTO scheduled_vaccination (paying_type, vaccination_day, branch_vaccine_id, vaccination_time_slot_id, is_applied) VALUES ('Credit', '2020-12-06', 2, 16,1);
+-- INSERT INTO scheduled_vaccination (paying_type, vaccination_day, branch_vaccine_id, vaccination_time_slot_id, is_applied) VALUES ('Cash', '2020-12-06', 3, 1,1);
+-- INSERT INTO scheduled_vaccination (paying_type, vaccination_day, branch_vaccine_id, vaccination_time_slot_id, is_applied) VALUES ('Credit', '2020-12-06', 3, 2,1);
