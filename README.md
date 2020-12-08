@@ -65,7 +65,7 @@ so that the VaccNow is planning to build multi their digital channels for consum
  
      - **Description:** this method is responsible for getting all available payment methods
 
-##Web View:
+# Web View:
 
 ![Alt text](webViewScreenShoots/1.png?raw=true "1")
 ![Alt text](webViewScreenShoots/1.png?raw=true "2")
@@ -73,6 +73,6 @@ so that the VaccNow is planning to build multi their digital channels for consum
 ![Alt text](webViewScreenShoots/1.png?raw=true "4")
 ![Alt text](webViewScreenShoots/1.png?raw=true "5")
 
-##Putting Project on rails:
+# Putting Project on rails:
 
 This spring boot with embed tomcat and inMemory DB with some mock ups values so there is no special configuration required  
