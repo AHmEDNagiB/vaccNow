@@ -1,0 +1,67 @@
+<div class="main-content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="content">
+                <form>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Branches</label>
+                                <select (change)="selectBranch($event.target.value)" class="custom-select form-control" id="Branches">
+                                    <option value="0" selected>All</option>
+                                    <option *ngFor="let branch of branchesMockUp"
+                                            value={{branch.id}}>{{ branch.name }}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label></label>
+                                <BR>
+                                <button (click)="filterByBranch()" class="btn btn-info btn-fill pull-left"> Filter</button>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 *ngIf="isNoBranches == false" class="title">Available Branches</h4>
+                    </div>
+                    <div class="header">
+                        <h4 *ngIf="isNoBranches == true" class="title">No Available Branches</h4>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped" *ngIf="isNoBranches == false">
+                            <thead>
+                            <tr>
+                                <th *ngFor="let cell of headerRow">{{ cell }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let row of dataRows">
+                                <td>{{row.name}}</td>
+                                <td>{{row.location}}</td>
+                                <td>{{row.availableVaccines}}</td>
+                                <td>
+                                    <button  class="btn btn-info btn-fill "> Schedule Vaccination</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
